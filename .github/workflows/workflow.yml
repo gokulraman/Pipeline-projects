@@ -1,7 +1,7 @@
 name: Basic workflow 
 on: 
   push:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs: 
   first-job: 
