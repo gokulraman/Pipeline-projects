@@ -1,14 +1,16 @@
 name: Basic workflow 
 on: 
   push:
-
+runs-on: ubuntu-latest
 jobs: 
   first-job: 
-    runs-on: ubuntu-latest
+    
 
     steps: 
       - name: Hello world print 
         run: echo "Hello, first pipeline"
-
-      - name: show time 
+  second-job:
+    steps:
+      - name: show time
+        needs: first-job 
         run: date
